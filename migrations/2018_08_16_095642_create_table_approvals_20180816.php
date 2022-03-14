@@ -16,6 +16,7 @@ class CreateTableApprovals20180816 extends Migration {
 			$table->bigIncrements('id');
 			$table->integer('user_id')->unsigned();
 			$table->integer('approver_id')->unsigned()->nullable();
+			$table->string('reference_id')->nullable()->index();
 			$table->string('model');
 			$table->string('operation');
 			$table->text('values');
